@@ -45,6 +45,8 @@ const Navbar = () => {
 		handleResize();
 
 		return () => window.removeEventListener("resize", handleResize);
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	useEffect(() => {
@@ -53,6 +55,8 @@ const Navbar = () => {
 		} else {
 			setActiveMenu(true);
 		}
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [screenSize]);
 
 	const handleActiveMenu = () => setActiveMenu(!activeMenu);
